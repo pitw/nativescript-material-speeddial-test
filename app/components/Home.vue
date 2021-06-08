@@ -4,45 +4,34 @@
       <NavigationButton visibility="hidden" />
       <GridLayout columns="50, *">
         <Label class="action-bar-title" text="Home" colSpan="2" />
-
-        <Label class="fas" text.decode="&#xf0c9;" @tap="onDrawerButtonTap" />
       </GridLayout>
     </ActionBar>
 
-    <GridLayout class="page__content">
-
-    </GridLayout>      <MDSpeedDial
-        buttonFontSize="26"
-        text="mdi-one-up"
+    <GridLayout class="page__content"> </GridLayout>
+    <MDSpeedDial
+      text.decode="&#xe904;"
+      buttonClass="mdi"
+      color="#f15a29"
+      @tap="onTap"
+              label="unicode"
+    >
+      <MDSpeedDialItem
+        backgroundColor="white"
         buttonClass="mdi"
-        buttonBackgroundColor="yellow"
+        label="unicode"
+        color="#f15a29"
+        text.decode="&#xe0bf;"
         @tap="onTap"
-      >
-        <MDSpeedDialItem
-          icon="res://ic_action_add"
-          title="test1"
-          backgroundColor="red"
-          @tap="onTap"
-        />
-        <MDSpeedDialItem
-          text="mdi-card-account-mail"
-          title="test2"
-          buttonClass="mdi"
-          backgroundColor="green"
-          @tap="onTap"
-        />
-        <MDSpeedDialItem
-          backgroundImage="~/images/iu.jpg"
-          backgroundColor="blue"
-          @tap="onTap"
-        />
-        <MDSpeedDialItem
-          icon="res://ic_action_add"
-          title="test4"
-          backgroundColor="orange"
-          @tap="onTap"
-        />
-      </MDSpeedDial>
+      />
+      <MDSpeedDialItem
+        backgroundColor="white"
+        buttonClass="mdi"
+        label="unicode"
+        color="#f15a29"
+        text.decode="&#xe2c7;"
+        @tap="onTap"
+      />
+    </MDSpeedDial>
   </Page>
 </template>
 
@@ -57,16 +46,16 @@ export default {
   computed: {
     message() {
       return "<!-- Page content goes here -->";
-    }
+    },
   },
   methods: {
     onTap() {
-      console.log("test")
+      console.log("test");
     },
     onDrawerButtonTap() {
       utils.showDrawer();
-    }
-  }
+    },
+  },
 };
 </script>
 
